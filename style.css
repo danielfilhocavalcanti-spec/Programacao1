@@ -100,7 +100,7 @@ video {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  width: 100px;
+  width: 100%;
   gap: 5px;
   text-align: left;
 }
