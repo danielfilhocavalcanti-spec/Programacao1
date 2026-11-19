@@ -516,6 +516,32 @@ button:focus-visible {
   .input-container {
     padding: 15px;
   }
+}
+  /* Grades: cartões sempre alinhados e centralizados */
+.eventos {
+  display: grid;
+  grid-template-columns: 1fr; /* Por padrão (celulares), fica em 1 coluna */
+  justify-items: center;
+  align-items: stretch;
+  gap: 20px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+/* Em telas maiores (computadores e tablets grandes), ajusta para 2 colunas se houver espaço, centralizando itens únicos */
+@media (min-width: 769px) {
+  .eventos {
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    justify-content: center;
+  }
+}
+
+.eventos > *,
+.eventos .cursos-gr {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
 
   .hero-section {
     padding: 24px 16px;
