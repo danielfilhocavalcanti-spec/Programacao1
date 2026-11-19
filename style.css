@@ -291,7 +291,7 @@ section h2 {
   font-size: clamp(1.4rem, 3vw, 2rem);
 }
 
-.cursos-gr acontecimentos {
+.cursos-gr {
   display: flex;
   flex-direction: column;
   align-items: center;
