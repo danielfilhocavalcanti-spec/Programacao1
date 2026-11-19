@@ -30,12 +30,17 @@ body {
   text-align: center;
 }
 
+/* Padronização de imagens e vídeos */
 img,
 video {
   display: block;
-  max-width: 100%;
+  width: 100%;
+  max-width: 400px;
   height: auto;
+  max-height: 450px;
+  object-fit: contain;
   margin-inline: auto;
+  border-radius: 10px;
 }
 
 /* Cabeçalho e identidade visual */
@@ -77,8 +82,7 @@ video {
 }
 
 /* Navegação centralizada */
-.nav-bar,
-.menu-list {
+.nav-bar {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -91,8 +95,7 @@ video {
   list-style: none;
 }
 
-.nav-bar a,
-.menu-list a {
+.nav-bar a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -110,8 +113,7 @@ video {
 }
 
 .nav-bar a:hover,
-.nav-bar a:focus-visible,
-.menu-list a:hover {
+.nav-bar a:focus-visible {
   color: var(--branco);
   background: var(--verde);
   border-color: var(--verde);
@@ -121,136 +123,6 @@ video {
   color: var(--verde-escuro);
   background: var(--verde-claro);
   border-color: var(--verde);
-}
-
-/* Área de acesso e formulários */
-.user-access {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 380px;
-  gap: 12px;
-  margin-inline: auto;
-}
-
-.login-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  gap: 12px;
-  margin-inline: auto;
-}
-
-.input-group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  gap: 5px;
-  text-align: center;
-}
-
-.input-group label,
-.input-group legend {
-  color: var(--texto);
-  font-size: 0.94rem;
-  font-weight: 700;
-  text-align: center;
-}
-
-.input-group input,
-.input-group select,
-.input-group textarea,
-.login-form input {
-  width: 100%;
-  min-width: 0;
-  padding: 11px 12px;
-  color: var(--texto);
-  background: var(--branco);
-  border: 1px solid #bdcbc1;
-  border-radius: 8px;
-  font: inherit;
-  text-align: center;
-}
-
-.input-group input:focus,
-.input-group select:focus,
-.input-group textarea:focus,
-.login-form input:focus {
-  outline: 3px solid rgba(22, 131, 72, 0.16);
-  border-color: var(--verde);
-}
-
-.input-group fieldset {
-  min-width: 0;
-  width: 100%;
-  text-align: center;
-}
-
-.signup-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  font-size: 0.88rem;
-  font-weight: 600;
-  text-align: center;
-}
-
-.esqueci-senha-box a,
-a {
-  overflow-wrap: anywhere;
-}
-
-.esqueci-senha-box a,
-.btn-cadastrar {
-  color: var(--verde-escuro);
-}
-
-/* Botões */
-.btn-entrar,
-.btn-cadastrar,
-button {
-  font: inherit;
-}
-
-.btn-entrar {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 20px;
-  color: var(--branco);
-  background: var(--verde-escuro);
-  border: 1px solid var(--verde-escuro);
-  border-radius: 9px;
-  cursor: pointer;
-  font-weight: 700;
-  text-align: center;
-  transition: background 0.2s ease, transform 0.2s ease;
-}
-
-.btn-entrar:hover {
-  background: var(--verde);
-}
-
-.btn-cadastrar {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 7px 14px;
-  background: var(--verde-claro);
-  border: 1px solid var(--verde);
-  border-radius: 9px;
-  text-decoration: none;
-  font-weight: 700;
-  text-align: center;
-}
-
-.btn-cadastrar:hover {
-  background: #d8eddf;
 }
 
 /* Área principal e seções */
@@ -263,7 +135,6 @@ main {
 }
 
 main > section,
-section.cursos,
 section.noticias {
   width: 100%;
   margin: 0 auto 26px;
@@ -276,19 +147,6 @@ h3,
 p,
 figcaption {
   text-align: center;
-}
-
-h1,
-h2,
-h3 {
-  line-height: 1.25;
-}
-
-main h1,
-main h2,
-section h1,
-section h2 {
-  color: var(--verde-escuro);
 }
 
 /* Apresentação */
@@ -311,7 +169,6 @@ section h2 {
   margin: 0 0 12px;
   color: var(--verde-escuro);
   font-size: clamp(1.6rem, 4vw, 2.2rem);
-  text-align: center;
 }
 
 .hero-section p {
@@ -319,11 +176,9 @@ section h2 {
   margin: 0 auto;
   color: var(--texto-suave);
   font-size: 1.05rem;
-  text-align: center;
 }
 
-/* Cursos, projetos, notícias e cartões */
-.cursos,
+/* Notícias e Cartões */
 .noticias {
   padding: clamp(18px, 4vw, 32px);
   background: var(--verde-claro);
@@ -332,23 +187,13 @@ section h2 {
   text-align: center;
 }
 
-.cursos > h1 {
-  max-width: 850px;
-  margin: 0 auto 25px;
-  color: var(--verde-escuro);
-  font-size: clamp(1.4rem, 3vw, 2rem);
-}
-
-.cursos-gr,
-.report-section,
-.input-container {
+.cursos-gr {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 15px;
   width: 100%;
-  max-width: 100%;
   margin: 0;
   padding: 22px;
   background: var(--branco);
@@ -362,10 +207,9 @@ section h2 {
   width: 100%;
   margin: 0;
   color: var(--verde-escuro);
-  text-align: center;
 }
 
-/* Grades: cartões sempre alinhados e centralizados em computadores e celulares */
+/* Grades: 2 colunas em computadores e 1 coluna em celulares */
 .eventos {
   display: grid;
   grid-template-columns: 1fr;
@@ -396,7 +240,6 @@ section h2 {
   justify-content: center;
   gap: 12px;
   width: 100%;
-  text-align: center;
 }
 
 figure {
@@ -405,28 +248,7 @@ figure {
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 450px;
   margin: 0 auto;
-  text-align: center;
-}
-
-.img-curso img {
-  width: 100%;
-  max-width: 350px;
-  height: auto;
-  margin-inline: auto;
-  object-fit: contain;
-  border-radius: 10px;
-}
-
-figure video,
-video {
-  display: block;
-  width: 100%;
-  max-width: 450px;
-  height: auto;
-  margin-inline: auto;
-  border-radius: 10px;
 }
 
 .img-curso p,
@@ -436,22 +258,10 @@ figcaption {
   color: var(--texto-suave);
   text-align: center;
   overflow-wrap: anywhere;
+  font-size: 0.95rem;
 }
 
-/* Painéis e formulários */
-.report-section,
-.input-container {
-  padding: clamp(18px, 4vw, 28px);
-}
-
-/* Acessibilidade */
-a:focus-visible,
-button:focus-visible {
-  outline: 3px solid var(--amarelo);
-  outline-offset: 3px;
-}
-
-/* Tablets e celulares */
+/* Responsividade para celulares */
 @media (max-width: 768px) {
   .header-container {
     padding: 18px 14px;
@@ -462,19 +272,13 @@ button:focus-visible {
     height: 88px;
   }
 
-  .user-access {
-    max-width: 100%;
-  }
-
-  .nav-bar,
-  .menu-list {
+  .nav-bar {
     flex-direction: column;
     align-items: center;
     width: 100%;
   }
 
-  .nav-bar a,
-  .menu-list a {
+  .nav-bar a {
     width: min(100%, 420px);
     margin-inline: auto;
   }
@@ -486,44 +290,5 @@ button:focus-visible {
 
   .eventos {
     grid-template-columns: 1fr;
-  }
-
-  .cursos-gr,
-  .report-section,
-  .input-container {
-    padding: 18px;
-  }
-
-  .img-curso {
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 420px) {
-  .header-container {
-    padding: 15px 10px;
-  }
-
-  .logo {
-    height: 76px;
-  }
-
-  .signup-row {
-    flex-direction: column;
-  }
-
-  .cursos,
-  .noticias {
-    padding: 14px;
-  }
-
-  .cursos-gr,
-  .report-section,
-  .input-container {
-    padding: 15px;
-  }
-
-  .hero-section {
-    padding: 24px 16px;
   }
 }
