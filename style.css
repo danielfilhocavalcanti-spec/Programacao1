@@ -242,7 +242,10 @@ figcaption {
   align-items: center;
   text-align: justify;
 }
-
+h2 {
+  color: green;
+  text-align: center;
+}
 /* Apresentação */
 .hero-section {
   display: flex;
