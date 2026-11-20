@@ -280,7 +280,35 @@ figcaption {
   border-radius: var(--raio);
   text-align: center;
 }
+.informacoes {
+  padding: clamp(18px, 4vw, 32px);
+  background: var(--verde-claro);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  text-align: justify;
+}
+.fim {
+  text-align: center;
+  align-items: center;
+}
+.container-lista {
+  display: flex;
+  justify-content: center; /* Centraliza o bloco da lista na página */
+  padding: 20px;
+}
 
+.lista-organizada {
+  list-style: none;        /* Remove as bolinhas padrão */
+  padding: 0;
+  margin: 0;
+  max-width: 700px;        /* Limita a largura para não esticar demais */
+  text-align: justify;     /* Alinha o texto como um documento formal */
+  line-height: 1.6;        /* Dá espaço entre as linhas para melhor leitura */
+}
+
+.lista-organizada li {
+  margin-bottom: 12px;     /* Separa o item "a" do item "b" */
+}
 .cursos-gr {
   display: flex;
   flex-direction: column;
