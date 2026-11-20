@@ -291,6 +291,9 @@ h2 {
   border-radius: var(--raio);
   text-align: justify;
 }
+.informacoes h2 {
+  text-align: center;
+}
 .fim {
   text-align: center;
   align-items: center;
