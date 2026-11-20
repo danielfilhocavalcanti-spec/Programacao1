@@ -240,7 +240,8 @@ h2,
 h3,
 p,
 figcaption {
-  text-align: center;
+  align-items: center;
+  text-align: justify;
 }
 
 /* Apresentação */
