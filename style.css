@@ -245,6 +245,7 @@ figcaption {
 h2 {
   color: green;
   text-align: center;
+  align-items: center;
 }
 /* Apresentação */
 .hero-section {
