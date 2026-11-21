@@ -9,7 +9,7 @@ h1{
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  width: 70%;
+  width: 60%;
   gap: 5px;
   text-align: left;
 }
@@ -24,5 +24,6 @@ h1{
 
 .input-group-gen {
     flex-direction: column;
+    width: 60%;
     
 }
